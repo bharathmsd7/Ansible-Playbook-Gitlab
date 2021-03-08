@@ -16,7 +16,7 @@
   get_url: url=https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh dest=/usr/src/gitlab.deb.sh mode=0755 validate_certs=no
   when: ansible_os_family == "Debian"
 
-- name: Install gitlab repo Debian-Like
+- name: Copy gitlab repo Debian-Like
   shell: /usr/src/gitlab.deb.sh
   when: ansible_os_family == "Debian"
 
